@@ -1,0 +1,148 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: "microsoft yahei";
+}
+.rect {
+	position: relative;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin: 20px auto;
+	border: 2px solid dodgerblue;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-align: center;
+}
+.triangle {
+	position: absolute;
+	left: -17px;
+	top: 13px;
+	border-right: 15px solid dodgerblue;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+}
+.empty {
+	position: absolute;
+	z-index: 100;
+	left: -12px;
+	top: 13px;
+	border-right: 15px solid white;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+}
+.ellipse {
+	width: 200px;
+	height: 100px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background-color: #DAA520;
+	line-height: 100px;
+	margin: 20px auto;
+	position: relative;
+}
+#icon {
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background-color: #DAA520;
+	position: absolute;
+	left: 20px;
+	bottom: -13px;
+}
+#icon1 {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background-color: #DAA520;
+	position: absolute;
+	left: 15px;
+	bottom: -20px;
+}
+
+#bubble {
+	position: relative;
+	width: 200px;
+	height: 100px;
+	margin: 30px auto;
+}
+#circle {
+	width: 200px;
+	height: 100px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background-color: #DAA520;
+	line-height: 100px;
+	position: relative;
+	z-index: 3;
+}
+#icon3 {
+	width: 46px;
+	height: 46px;
+	border-radius: 23px;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	background-color: #DAA520;
+	position: absolute;
+	left: 78px;
+	bottom: -30px;
+}
+#icon4 {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	background-color: white;
+	position: absolute;
+	left: 70px;
+	bottom: -27px;
+}
+
+.bubble {
+	position: relative;
+	padding: 15px;
+	margin: 60px auto;
+	width: 300px;
+	line-height: 1.2;
+	text-align: center;
+	color: #fff;
+	background: #075698;
+	/*圆角*/
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	/*制作线性渐变的效果。*/
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9d835), to(#f3961c));
+	background: -moz-linear-gradient(top, #f9d835, #f3961c);
+	background: -o-linear-gradient(top, #f9d835, #f3961c);
+	background: linear-gradient(top, #f9d835, #f3961c);
+}
+/*在容器后面添加一个空元素，并将长度和宽度都设为0。*/
+
+.bubble:after {
+	content: "\00a0";
+	width: 0;
+	height: 0;
+	/*指定这个空元素为块级元素，并且四个边框之中，只显示上方的边框，其他三个边框，都设为透明。因为该元素的大小为0，所以它的每一个边框，都是一个等腰三角形。*/
+	
+	display: block;
+	border-style: solid;
+	border-width: 15px;
+	border-color: #f3961c transparent transparent transparent;
+	/*指定空元素的定位方式为absolute。然后，以容器元素的左下角为基点，将空元素水平右移一定的距离（这里是50像素），再垂直下移两个边界的距离。（由于第五步将空元素的边界设为15像素，所以这里就是下移30像素。）*/
+	
+	position: absolute;
+	z-index: -1;
+	bottom: -30px;
+	left: 50px;
+}
